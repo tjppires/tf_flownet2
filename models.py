@@ -9,11 +9,12 @@ This code does NOT include the training code. It is only used for exporting a
 SavedModel from the available checkpoints.
 """
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from tensorflow_addons import image as tfa_image
 from tensorflow_addons import layers as tfa_layers
 import tf_slim as slim
 
+tf.disable_v2_behavior()
 
 WEIGHT_DECAY = 0.0004
 
