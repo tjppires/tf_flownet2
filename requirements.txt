@@ -1,3 +1,6 @@
+matplotlib
+numpy
+opencv-python
 tensorflow
 tensorflow_addons
 git+https://github.com/google-research/tf-slim
