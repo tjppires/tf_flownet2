@@ -56,7 +56,8 @@ def correlation(input_a, input_b, kernel_size, max_displacement, stride_1,
 
 
 def flow_warp(image, flow):
-  return tfa_image.dense_image_warp(image, flow)
+  # Tensorflow addons uses a different notation for flow, hence the minus sign.
+  return tfa_image.dense_image_warp(image, -flow)
 
 
 def channel_norm(tensor):
