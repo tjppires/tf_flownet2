@@ -538,7 +538,7 @@ class FlowNet2:
     self.net_sd = FlowNetSD()
 
   def run(self, inputs, trainable=True):
-    """Docstrings!!!"""
+    """Runs model."""
     _, height, width, _ = inputs["input_a"].shape.as_list()
     with tf.variable_scope("FlowNet2"):
       # Forward pass through FlowNetCSS and FlowNetSD with weights frozen.
